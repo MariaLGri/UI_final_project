@@ -2,13 +2,12 @@ package pages;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.WebElementsCondition;
 
 import static com.codeborne.selenide.CollectionCondition.exactTexts;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class MainOfferNowPage {
+public class MainPage {
 
     private final SelenideElement
 
@@ -18,7 +17,7 @@ public class MainOfferNowPage {
             menuList = $$(".t-menu__list");
 
 
-    public MainOfferNowPage openPage() {
+    public MainPage openPage() {
         open("https://offer-now.ru/");
         return this;
     }
@@ -35,7 +34,7 @@ public class MainOfferNowPage {
         );
     }
 
-    public MainOfferNowPage checkLanguageSwitch () {
+    public MainPage checkLanguageSwitch () {
         language.click();
         return this;
     }

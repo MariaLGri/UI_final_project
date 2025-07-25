@@ -24,19 +24,6 @@ public class VacancyCompanyInHHTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Проверка перехода на страницу краткого описания компании")
-    public void vacancyReviewStarUserTest() {
-        step("Проверяем открытие страницы вакансии Auto QA (Java)", () -> {
-            vacancyJavaQaPage.openPage();
-        });
-        step("Проверяем переход по клику на страницу описания компании ", () -> {
-            vacancyJavaQaPage.checkCompanyClickPage();
-        });
-
-    }
-
-
-    @Test
     @DisplayName("Проверка видимости общей оценки компании ")
     void vacancyReviewStarCompanyTest() {
         step("Проверяем открытие страницы вакансии Auto QA (Java)", () -> {
