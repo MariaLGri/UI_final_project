@@ -25,8 +25,8 @@ public class WorkPageTests extends TestBase{
 
     }
 
-    @ParameterizedTest
     @DisplayName("Тесты формы обратной связи")
+    @ParameterizedTest
     @CsvFileSource(resources = "/form_test_data.csv", numLinesToSkip = 1)
     public void testFormFillingWithCsv(String name, String phone, String email, String link, String comment) {
         step("Открываем страницу 'Работа у нас' ", () -> {
