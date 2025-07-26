@@ -7,7 +7,7 @@ import pages.HhVacancyJavaQaPage;
 import static io.qameta.allure.Allure.step;
 
 
-@DisplayName("Автотесты для компании OFFER NOW, вакансия на сайте HH, переход на сайт")
+@DisplayName("Автотесты для компании OFFER NOW, вакансия на сайте HH, переход на страницу описания компании")
 @Owner("Гришина М.Л")
 public class VacancyCompanyInHHTests extends TestBase {
     HhVacancyJavaQaPage vacancyJavaQaPage = new HhVacancyJavaQaPage();
@@ -15,9 +15,6 @@ public class VacancyCompanyInHHTests extends TestBase {
     @Test
     @DisplayName("Проверка открытия страницы вакансии Auto QA (Java)")
     public void vacancyPageTest() {
-        step("Открытие страницы вакансии", () -> {
-            vacancyJavaQaPage.openPage();
-        });
         step("Проверяем наименования страницы (вакансии)", () -> {
             vacancyJavaQaPage.checkResultNamePage();
         });
@@ -26,9 +23,7 @@ public class VacancyCompanyInHHTests extends TestBase {
     @Test
     @DisplayName("Проверка видимости общей оценки компании ")
     void vacancyReviewStarCompanyTest() {
-        step("Проверяем открытие страницы вакансии Auto QA (Java)", () -> {
-            vacancyJavaQaPage.openPage();
-        });
+
         step("Проверяем , что видно рейтинг ", () -> {
             vacancyJavaQaPage.checkStarsCompany();
         });
@@ -37,9 +32,7 @@ public class VacancyCompanyInHHTests extends TestBase {
     @Test
     @DisplayName("Проверка перехода на страницу краткого описания компании для вакансии")
     void vacancyCompanyTest() {
-        step("Проверяем открытие страницы вакансии Auto QA (Java)", () -> {
-            vacancyJavaQaPage.openPage();
-        });
+
         step("Проверяем переход по клику на страницу описания компании ", () -> {
             vacancyJavaQaPage.checkCompanyClickPage();
         });

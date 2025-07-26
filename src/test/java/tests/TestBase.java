@@ -9,10 +9,14 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import pages.HhVacancyJavaQaPage;
 
 import java.util.Map;
 
+import static io.qameta.allure.Allure.step;
+
 public class TestBase {
+    protected HhVacancyJavaQaPage vacancyJavaQaPage = new HhVacancyJavaQaPage();
 
     @BeforeAll
     static void installСonfiguration() {
@@ -43,9 +47,18 @@ public class TestBase {
     }
 
     @BeforeEach
+
     void installСonfigurationBefore() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+
+
+        if (this instanceof VacancyCompanyInHHTests) {
+            step("Открываем страницу вакансии Auto QA (Java)", () -> {
+                vacancyJavaQaPage.openPage();
+            });
+        }
     }
+
 
     @AfterEach
     void addAttachments() {
@@ -58,4 +71,3 @@ public class TestBase {
 
     }
 }
-
