@@ -30,7 +30,7 @@ public class VacancyCompanyInHHTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Проверка перехода на страницу краткого описания компании для вакансии")
+    @DisplayName("Проверка перехода на страницу краткого описания компании")
     void vacancyCompanyTest() {
 
         step("Проверяем переход по клику на страницу описания компании ", () -> {
