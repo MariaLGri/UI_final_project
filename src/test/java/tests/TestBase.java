@@ -10,6 +10,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.HhVacancyJavaQaPage;
+import pages.MainPage;
+import pages.WorkFormWithUsPage;
 
 import java.util.Map;
 
@@ -17,6 +19,8 @@ import static io.qameta.allure.Allure.step;
 
 public class TestBase {
     protected HhVacancyJavaQaPage vacancyJavaQaPage = new HhVacancyJavaQaPage();
+    protected WorkFormWithUsPage workFormWithUsPage = new WorkFormWithUsPage();
+    protected MainPage mainPage = new MainPage();
 
     @BeforeAll
     static void installСonfiguration() {
@@ -55,6 +59,17 @@ public class TestBase {
         if (this instanceof VacancyCompanyInHHTests) {
             step("Открываем страницу вакансии Auto QA (Java)", () -> {
                 vacancyJavaQaPage.openPage();
+            });
+        }
+
+        if (this instanceof WorkPageTests) {
+            step("Открываем страницу 'Работа у нас' ", () -> {
+                workFormWithUsPage.openPage();
+            });
+        }
+        if (this instanceof MainPageTests) {
+            step("Проверяем открытие главной страницы OFFER NOW", () -> {
+                mainPage.openPage();
             });
         }
     }

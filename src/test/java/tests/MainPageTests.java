@@ -18,10 +18,6 @@ public class MainPageTests extends TestBase {
     @Test
     @DisplayName("Проверка главной страницы, открытие, логотип, меню")
     void shouldDisplayMainPageElements() {
-        step("Проверяем открытие главной страницы OFFER NOW", () -> {
-            mainPage.openPage();
-        });
-
         step("Проверяем наличие логотипа компании ", () -> {
             mainPage.checkLogoPage();
         });
@@ -34,10 +30,6 @@ public class MainPageTests extends TestBase {
     @Test
     @DisplayName("Проверка смены языка на главной странице")
     void shouldChangeLanguageOnMainPage() {
-        step("Проверяем открытие главной страницы OFFER NOW", () -> {
-            mainPage.openPage();
-        });
-
         step("Клик по ссылке смены языка ", () -> {
             mainPage.checkLanguageSwitch();
         });
@@ -47,6 +39,5 @@ public class MainPageTests extends TestBase {
         });
 
     }
-
 
 }
