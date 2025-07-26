@@ -162,11 +162,12 @@ _Allure Report_ — это визуализированный отчёт о те
 * Видео выполнения автотеста.
 
 <br>
+
 ### 🔍 Обзор
 
 <p align="center">
   <a href="https://jenkins.autotests.cloud/job/035_vacancy_test_home/29/allure/" target="_blank" rel="noopener noreferrer">
-    <img src="media/pictures/allure0.png" alt="Allure Overview Dashboard" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
+    <img src="media/pictures/allure0.PNG" alt="Allure Overview Dashboard" style="border: 1px solid #ddd; border-radius: 4px; padding: 5px;">
   </a>
 </p>
 
@@ -217,7 +218,7 @@ _Allure TestOps_ — это платформа для управления те�
 сообщение с отчетом о прогоне тестов.
 
 <p align="center">
-<img width="400" title="Telegram Notifications" src="media/pictures/telegram.PNG">
+<img width="600" title="Telegram Notifications" src="media/pictures/telegram.PNG">
 </p>
 
 <br>
