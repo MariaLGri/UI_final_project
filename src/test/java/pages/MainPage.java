@@ -12,7 +12,7 @@ public class MainPage {
     private final SelenideElement
 
             logo = $(".t228__logo"),
-    language = $("a[href='http://offer-now.org']");
+            language = $("a[href='http://offer-now.org']");
     private final ElementsCollection
             menuList = $$(".t-menu__list");
 
@@ -34,7 +34,7 @@ public class MainPage {
         );
     }
 
-    public MainPage checkLanguageSwitch () {
+    public MainPage checkLanguageSwitch() {
         language.click();
         return this;
     }
