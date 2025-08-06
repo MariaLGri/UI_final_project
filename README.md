@@ -99,7 +99,7 @@ gradle clean test
 ---
 
 <a id="сборка-в-jenkins"></a>
-<p align="center"> 
+<p align="center">
 
 # <a href="https://jenkins.autotests.cloud/job/035_vacancy_test_home/" target="_blank"><img width="40px" style="vertical-align:middle" src="media/pictures/Jenkins_logo.png" alt="Jenkins Logo"> Сборка в Jenkins
 
