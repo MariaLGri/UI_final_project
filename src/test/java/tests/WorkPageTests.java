@@ -34,9 +34,9 @@ public class WorkPageTests extends TestBase {
     @Nested
     @DisplayName("Тестирование формы 'Хочу в команду'")
     @Story("Функционал формы обратной связи")
+    @Owner("Гришина М.Л")
     class FormTests {
         @ParameterizedTest(name = "Тест заполнения формы с данными: {0}, {1}, {2}")
-        @Owner("Гришина М.Л")
         @Severity(SeverityLevel.CRITICAL)
         @DisplayName("Проверка отправки формы с различными данными")
         @Description("Параметризованный тест проверки формы обратной связи с различными входными данными")

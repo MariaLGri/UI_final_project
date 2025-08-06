@@ -11,12 +11,12 @@ import static io.qameta.allure.Allure.step;
 @Epic("WEB UI Тестирование")
 @Feature("Основные элементы")
 @Story("Отображение элементов главной страницы")
+@Owner("Гришина М.Л")
 
 public class MainPageTests extends TestBase {
     MainPage mainPage = new MainPage();
 
     @Test
-    @Owner("Гришина М.Л")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Проверка главной страницы, открытие, логотип, меню")
     void shouldDisplayMainPageElements() {

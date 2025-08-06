@@ -26,7 +26,6 @@ public class VacancyCompanyInHHTests extends TestBase {
     }
 
     @Test
-    @Owner("Гришина М.Л")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверка видимости общей оценки компании ")
     void vacancyReviewStarCompanyTest() {
@@ -37,7 +36,6 @@ public class VacancyCompanyInHHTests extends TestBase {
     }
 
     @Test
-    @Owner("Гришина М.Л")
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверка перехода на страницу краткого описания компании")
     void vacancyCompanyTest() {
