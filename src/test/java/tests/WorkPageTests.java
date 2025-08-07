@@ -36,7 +36,6 @@ public class WorkPageTests extends TestBase {
         @Description("Параметризованный тест проверки формы обратной связи с различными входными данными")
         @CsvFileSource(resources = "/form_test_data.csv", numLinesToSkip = 1)
         public void formFillingWithCsvTest(String name, String phone, String email, String link, String comment) {
-
                 workFormWithUsPage
                         .workOpenForm()
                         .fillName(name)
