@@ -20,7 +20,7 @@ public class WorkPageTests extends TestBase {
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Проверка страницы 'Работа у нас', открытие, текст ")
     void vacancyCompanyTest() {
-            workFormWithUsPage.checkTextPage();
+        workFormWithUsPage.checkTextPage();
 
     }
 
@@ -36,15 +36,15 @@ public class WorkPageTests extends TestBase {
         @Description("Параметризованный тест проверки формы обратной связи с различными входными данными")
         @CsvFileSource(resources = "/form_test_data.csv", numLinesToSkip = 1)
         public void formFillingWithCsvTest(String name, String phone, String email, String link, String comment) {
-                workFormWithUsPage
-                        .workOpenForm()
-                        .fillName(name)
-                        .fillEmail(email)
-                        .fillPhone(phone)
-                        .fillSubject(link)
-                        .fillMessage(comment)
-                        .submitForm()
-                        .verifySuccessMessage();
+            workFormWithUsPage
+                    .workOpenForm()
+                    .fillName(name)
+                    .fillEmail(email)
+                    .fillPhone(phone)
+                    .fillSubject(link)
+                    .fillMessage(comment)
+                    .submitForm()
+                    .verifySuccessMessage();
 
         }
     }
