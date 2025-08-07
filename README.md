@@ -101,7 +101,7 @@ gradle clean test
 <a id="сборка-в-jenkins"></a>
 <p align="center">
 
-# <a href="https://jenkins.autotests.cloud/job/035_vacancy_test_home/" target="_blank"><img width="40px" style="vertical-align:middle" src="media/pictures/Jenkins_logo.png" alt="Jenkins Logo"> Сборка в Jenkins
+# <img width="40px" style="vertical-align:middle" src="media/pictures/Jenkins_logo.png" alt="Jenkins Logo"> Сборка в <a href="https://jenkins.autotests.cloud/job/035_vacancy_test_home/" target="_blank">Jenkins</a>
 
 </p>
 
@@ -137,7 +137,7 @@ Report</code>, при клике на которую откроется стра
 
 
 
-# <img width="38" style="vertical-align:middle" alt="Allure Report" src="media/icons/Allure_Report.png"> Пример  <a href="https://jenkins.autotests.cloud/job/035_vacancy_test_home/29/allure/" target="_blank" rel="noopener noreferrer">Allure</a>-отчета
+# <img width="38" style="vertical-align:middle" alt="Allure Report" src="media/icons/Allure_Report.png"> Пример  <a href="https://jenkins.autotests.cloud/job/035_vacancy_test_home/29/allure/" target="_blank" rel="noopener noreferrer">Allure</a> отчета
 _Allure Report_ — это визуализированный отчёт о тестировании, который делает результаты запусков автотестов удобными для анализа.
 
 ### _Преимущества:_
