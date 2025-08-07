@@ -25,7 +25,7 @@ public class WorkFormWithUsPage {
         open("https://offer-now.ru/work");
         return this;
     }
-    @Step("Проверяем текст")
+    @Step("Проверяем текст 'На данный момент у нас открыты следующие вакансии!'")
     public void checkTextPage() {
         text.shouldHave(text("На данный момент у нас открыты следующие вакансии!"));
 

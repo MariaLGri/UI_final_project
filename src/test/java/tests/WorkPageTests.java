@@ -8,8 +8,6 @@ import org.junit.jupiter.params.provider.CsvFileSource;
 import pages.WorkFormWithUsPage;
 import org.junit.jupiter.api.Nested;
 
-import static io.qameta.allure.Allure.step;
-
 @DisplayName("Автотесты OFFER NOW - Раздел 'Работа у нас'")
 @Epic("WEB UI Тестирование")
 @Feature("Карьера в OFFER NOW")
@@ -22,10 +20,7 @@ public class WorkPageTests extends TestBase {
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Проверка страницы 'Работа у нас', открытие, текст ")
     void vacancyCompanyTest() {
-
-        step("Проверяем наличие текста на странице", () -> {
             workFormWithUsPage.checkTextPage();
-        });
 
     }
 
