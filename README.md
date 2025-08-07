@@ -57,7 +57,7 @@ Selenide</code>, сборщик - <code>Gradle</code>. <code>JUnit 5</code> за
 
 При прогоне тестов для запуска браузеров используется <code>Selenoid</code>.
 Для удаленного запуска реализована джоба в <code>Jenkins</code> с формированием Allure-отчета и отправкой результатов
-в <code>Telegram</code> при помощи бота. Так же реализована интеграция с <code>Allure TestOps</code>.
+в <code>Telegram</code> при помощи бота. Так же реализована интеграция с <code>Allure TestOps</code>. 
 
 <br>
 
