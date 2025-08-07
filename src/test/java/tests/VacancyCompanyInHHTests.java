@@ -12,27 +12,24 @@ import static io.qameta.allure.Allure.step;
 @Epic("WEB UI Тестирование")
 @Feature("Вакансии на HH")
 @Story("Функционал страницы вакансии QA Java")
+@Owner("Гришина М.Л")
 public class VacancyCompanyInHHTests extends TestBase {
     HhVacancyJavaQaPage vacancyJavaQaPage = new HhVacancyJavaQaPage();
 
     @Test
-    @Owner("Гришина М.Л")
     @Severity(SeverityLevel.CRITICAL)
     @DisplayName("Открытие страницы вакансии Auto QA (Java)")
     public void vacancyPageTest() {
-        step("Проверяем наименования страницы (вакансии)", () -> {
-            vacancyJavaQaPage.checkResultNamePage();
-        });
+        vacancyJavaQaPage.checkResultNamePage();
+
     }
 
     @Test
     @Severity(SeverityLevel.NORMAL)
     @DisplayName("Проверка видимости общей оценки компании ")
     void vacancyReviewStarCompanyTest() {
+        vacancyJavaQaPage.checkStarsCompanyPage();
 
-        step("Проверяем , что видно рейтинг ", () -> {
-            vacancyJavaQaPage.checkStarsCompany();
-        });
     }
 
     @Test
@@ -40,13 +37,9 @@ public class VacancyCompanyInHHTests extends TestBase {
     @DisplayName("Проверка перехода на страницу краткого описания компании")
     void vacancyCompanyTest() {
 
-        step("Проверяем переход по клику на страницу описания компании ", () -> {
-            vacancyJavaQaPage.checkCompanyClickPage();
-        });
+        vacancyJavaQaPage.checkCompanyClickPage()
+                .checkCompanyClickPageNew();
 
-        step("Проверяем присутствие описания компании на странице", () -> {
-            vacancyJavaQaPage.checkCompanyClickPageNew();
-        });
     }
 }
 

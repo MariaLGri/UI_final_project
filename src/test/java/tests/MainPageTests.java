@@ -4,6 +4,7 @@ import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import pages.MainPage;
+
 import static io.qameta.allure.Allure.step;
 
 
@@ -12,14 +13,13 @@ import static io.qameta.allure.Allure.step;
 @Feature("Основные элементы")
 @Story("Отображение элементов главной страницы")
 @Owner("Гришина М.Л")
-
 public class MainPageTests extends TestBase {
     MainPage mainPage = new MainPage();
 
     @Test
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Проверка главной страницы, открытие, логотип, меню")
-    void shouldDisplayMainPageElements() {
+    void shouldDisplayMainPageElementsTest() {
         step("Проверяем наличие логотипа компании ", () -> {
             mainPage.checkLogoPage();
         });
@@ -30,17 +30,11 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
-    @Owner("Гришина М.Л")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Проверка смены языка на главной странице")
-    void shouldChangeLanguageOnMainPage() {
-        step("Клик по ссылке смены языка ", () -> {
-            mainPage.checkLanguageSwitch();
-        });
-
-        step("Проверяем что страница отображена на ENG языке ", () -> {
-            mainPage.checkMenuEngPage();
-        });
+    void shouldChangeLanguageOnMainPageTest() {
+        mainPage.checkLanguageSwitchPage()
+                .checkMenuEngPage();
 
     }
 

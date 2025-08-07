@@ -2,6 +2,7 @@ package pages;
 
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.CollectionCondition.exactTexts;
 import static com.codeborne.selenide.Condition.text;
@@ -28,21 +29,21 @@ public class MainPage {
     }
 
     public void checkMenuPage() {
-        // Проверка наличия основных пунктов меню
         menuList.shouldHave(
                 exactTexts("Главная Работодателю Работа у нас Контакты Вопрос / Ответ")
         );
     }
 
-    public MainPage checkLanguageSwitch() {
+    @Step("Клик по ссылке смены языка ")
+    public MainPage checkLanguageSwitchPage() {
         language.click();
         return this;
     }
 
+    @Step("Проверяем что страница отображена на ENG языке ")
+
     public void checkMenuEngPage() {
-        // Проверка наличия основных пунктов меню
         menuList.shouldHave(
-                exactTexts("Home Work Contacts")
-        );
+                exactTexts("Home Work Contacts"));
     }
 }

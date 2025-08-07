@@ -1,22 +1,19 @@
 package pages;
 
 import com.codeborne.selenide.*;
+import io.qameta.allure.Step;
+
 import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
-
-
-
 
 public class HhVacancyJavaQaPage {
     private final SelenideElement
 
-            textH = $("[data-qa=\"title-container\"]"),
             namePage = $(".bloko-header-section-1"),
-            pageCompany = $(".g-user-content p").$("strong"),
-            transition = $("a[data-qa='link'][href='https://offer-now.ru/']"),
-            pageCompanyOfSite = $(".tn-atom"),
-            favorites = $("[data-qa=\"vacancy-body-mark-favorite_false\"]");
+            pageCompany = $(".g-user-content p").$("strong");
+
     private final ElementsCollection
             link = $$("div[data-qa=vacancy-company] span");
 
@@ -27,45 +24,27 @@ public class HhVacancyJavaQaPage {
 
         return this;
     }
-
+@Step("Проверяем наименования страницы (вакансии)")
     public void checkResultNamePage() {
         namePage.shouldHave(text("Auto QA (Java)"));
 
     }
 
-
-
-
-    public HhVacancyJavaQaPage clickFavorites() {
-        favorites.click();
-
-        return this;
-    }
-
-
-    public void checkFormReg() {
-        textH.shouldHave(text("Вход"));
-
-    }
-
-
-    public void checkStarsCompany() {
-        // 1. Проверяем наличие уведомления и закрываем его, если есть
+    @Step("Проверяем , что видно рейтинг ")
+    public void checkStarsCompanyPage() {
         if ($("[data-qa='bloko-notification']").exists()) {
-            // Вариант A: Закрыть кнопкой (если есть)
             $("[data-qa='bloko-notification'] [data-qa='close-button']").click();
-
             $("[data-qa='employer-reviews-stars'] [class*='star']")
                     .shouldBe(visible, Duration.ofSeconds(10));
         }
     }
-
+    @Step("Проверяем переход по клику на страницу описания компании ")
     public HhVacancyJavaQaPage checkCompanyClickPage() {
         link.findBy(exactText("Offer Now"))
                 .click();
         return this;
     }
-
+    @Step("Проверяем присутствие описания компании на странице")
     public void checkCompanyClickPageNew() {
         pageCompany.shouldHave(exactText("Offer Now"));
 

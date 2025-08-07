@@ -15,7 +15,6 @@ public class TestConfig {
     }
 
     private static void loadProperties() {
-        // Проверяем, не локальный ли это запуск
         isLocalRun = Boolean.parseBoolean(System.getProperty("local", "false"));
 
         String propertiesFile = isLocalRun ? LOCAL_PROPERTIES_FILE : DEFAULT_PROPERTIES_FILE;

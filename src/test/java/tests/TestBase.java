@@ -24,7 +24,7 @@ public class TestBase {
     protected MainPage mainPage = new MainPage();
 
     @BeforeAll
-    static void installСonfiguration() {
+    static void installConfiguration() {
         Configuration.baseUrl = TestConfig.getBaseUrl();
         Configuration.browser = TestConfig.getBrowser();
         Configuration.browserVersion = TestConfig.getBrowserVersion();
@@ -56,8 +56,7 @@ public class TestBase {
     }
 
     @BeforeEach
-
-    void installСonfigurationBefore() {
+    void installConfigurationBefore() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
 
