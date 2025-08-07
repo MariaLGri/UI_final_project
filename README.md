@@ -9,7 +9,7 @@
 </p>
 
 <div align="center">
-  <h2> ПРОЕКТ АВТОМАТИЗАЦИИ | <img src="media/offer_now_logo.png" width="20" alt=""> OFFER NOW</h2>
+  <h2> ПРОЕКТ АВТОМАТИЗАЦИИ | <a href="https://offer-now.ru/" target="_blank" title="Официальный сайт компании" style="text-decoration: none;"> OFFER NOW </a> </h2>
 </div>
 
 ---
@@ -137,7 +137,7 @@ Report</code>, при клике на которую откроется стра
 
 
 
-# <img width="38" style="vertical-align:middle" alt="Allure Report" src="media/icons/Allure_Report.png"> Пример Allure-отчета
+# <img width="38" style="vertical-align:middle" alt="Allure Report" src="media/icons/Allure_Report.png"> Пример  <a href="https://jenkins.autotests.cloud/job/035_vacancy_test_home/29/allure/" target="_blank" rel="noopener noreferrer">Allure</a>-отчета
 _Allure Report_ — это визуализированный отчёт о тестировании, который делает результаты запусков автотестов удобными для анализа.
 
 ### _Преимущества:_
@@ -191,7 +191,7 @@ _Allure Report_ — это визуализированный отчёт о те
 
 <a id="Интеграция"></a>
 
-# <a href="https://allure.autotests.cloud/launch/47528/tree/720233?treeId=0" target="_blank"><img width="38" src="media/icons/AllureTestOps.svg" alt="Allure TestOps"> Интеграция с Allure TestOps</a>
+# <img width="38" src="media/icons/AllureTestOps.svg" alt="Allure TestOps"> Интеграция с <a href="https://allure.autotests.cloud/launch/47528/tree/720233?treeId=0" target="_blank"> Allure TestOps</a>
 _Allure TestOps_ — это платформа для управления тестированием на базе Allure Report с расширенными возможностями.
 
 ### _Основные функции:_
