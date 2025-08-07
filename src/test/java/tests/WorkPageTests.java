@@ -26,6 +26,7 @@ public class WorkPageTests extends TestBase {
 
 
     @Nested
+    @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Тестирование формы 'Хочу в команду'")
     @Story("Функционал формы обратной связи")
     class FormTests {
