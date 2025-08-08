@@ -84,13 +84,28 @@ Selenide</code>, сборщик - <code>Gradle</code>. <code>JUnit 5</code> за
 
 ### ✨ | 🖥️ Запуск автотестов из jenkins| ✨
 
-```
+**Локальный запуск**
+```bash
 gradle clean test
--Dbrowser=chrome 
--DbrowserVersion=127.0 
--DbrowserSize=1920x1200 
--DselenoidUrl=selenoid.autotests.cloud 
 ```
+
+**Запуск с параметрами**
+```bash
+-Dbrowser=chrome -DbrowserVersion=128.0
+```
+
+**Удалённый запуск через Jenkins**
+```bash
+clean
+${TASK}
+-Dbrowser=${BROWSER}
+-DbrowserVersion=${BROWSER_VERSION}
+-DbrowserSize=${BROWSER_SIZE}
+-DselenoidUrl=${SELENOID_URL}
+-DselenoidUserLogin=${SELENOID_LOGIN}
+-DselenoidUserPassword=${SELENOID_PASSWORD}
+```
+---
 
 При выполнении данной команды тесты запустятся удаленно в <code>Selenoid</code>.
 
