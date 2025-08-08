@@ -18,7 +18,7 @@ public class MainPageTests extends TestBase {
     MainPage mainPage = new MainPage();
 
     @Test
-    @Tag("mainpagetest")
+    @Tag("main_page_test")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Проверка главной страницы, открытие, логотип, меню")
     void shouldDisplayMainPageElementsTest() {
@@ -32,7 +32,7 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
-    @Tag("mainpagetest")
+    @Tag("main_page_test")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Проверка смены языка на главной странице")
     void shouldChangeLanguageOnMainPageTest() {

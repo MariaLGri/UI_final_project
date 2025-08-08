@@ -18,7 +18,7 @@ public class WorkPageTests extends TestBase {
     WorkFormWithUsPage workFormWithUsPage = new WorkFormWithUsPage();
 
     @Test
-    @Tag("workpagetest")
+    @Tag("work_page_test")
     @Severity(SeverityLevel.BLOCKER)
     @DisplayName("Проверка страницы 'Работа у нас', открытие, текст ")
     void vacancyCompanyTest() {
@@ -33,7 +33,7 @@ public class WorkPageTests extends TestBase {
     class FormTests {
         @ParameterizedTest(name = "Тест заполнения формы с данными: {0}, {1}, {2}")
         @Severity(SeverityLevel.CRITICAL)
-        @Tag("workpagetest")
+        @Tag("work_page_test")
         @DisplayName("Проверка отправки формы с различными данными")
         @Description("Параметризованный тест проверки формы обратной связи с различными входными данными")
         @CsvFileSource(resources = "/form_test_data.csv", numLinesToSkip = 1)
