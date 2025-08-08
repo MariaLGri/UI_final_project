@@ -50,15 +50,15 @@ tasks.withType(Test) {
 }
 
 
-task UiMain_test(type: Test) {
+task main_page_test(type: Test) {
     useJUnitPlatform {
-        includeTags("mainpagetest")
+        includeTags("main_page_test")
     }
 }
 
-task UiWork_test(type: Test) {
+task work_page_test(type: Test) {
     useJUnitPlatform {
-        includeTags("workpagetest")
+        includeTags("work_page_test")
     }
 }
 compileJava {
